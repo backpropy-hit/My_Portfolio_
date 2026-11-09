@@ -1,0 +1,24 @@
+---
+title: 'IRC 2026 rover: real-time cone detection'
+date: '2026-02-20'
+tags: ['computer-vision','yolo','ros2','openvino']
+draft: false
+summary: 'A YOLOv8 vision pipeline for an autonomous rover, run on a CPU-only Intel NUC. The team placed 9th internationally.'
+authors: ['default']
+---
+
+## Problem
+The IRC'26 Reconnaissance and Delivery Operation (RADO) mission needed the rover to detect and classify cones on its own and navigate to them.
+
+## What I built
+- Expanded a Kaggle dataset from 4 to 6 cone classes with HSV-based synthetic generation, then trained a custom YOLOv8 model that held up across different lighting.
+- Converted the model with OpenVINO for CPU-only deployment on an Intel NUC, which removed a real-time latency bottleneck.
+- Built ArUco marker detection and pose estimation for the autonomous mission.
+- Deployed the detector as a ROS2 node that streams cone coordinates to the navigation stack.
+
+## Result
+The team ranked 9th internationally at IRC'26 and was the only NIT team representing in that ranking.
+
+**Tools:** Python, OpenCV, YOLOv8, OpenVINO, ROS2
+
+**Links:** Repo: [add link]

@@ -1,0 +1,23 @@
+---
+title: 'Gesture-controlled robot'
+date: '2025-10-20'
+tags: ['computer-vision','embedded','esp32']
+draft: false
+summary: 'A robot driven by real-time hand gesture recognition, with detection-to-motion latency under 100 ms.'
+authors: ['default']
+---
+
+## Problem
+Control a robot with hand gestures seen by a camera, with no remote.
+
+## What I built
+- A YOLOv11x model that recognises 8 gesture classes, trained for 50 epochs on 2,000+ images with augmentation for varied hand positions and backgrounds.
+- An OpenCV pipeline for image processing.
+- ESP32 firmware (Arduino IDE) for motor control.
+
+## Result
+End-to-end latency from detection to movement under 100 ms.
+
+**Tools:** Python, OpenCV, YOLOv11, ESP32, Arduino
+
+**Links:** Repo: [add link]

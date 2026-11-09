@@ -1,0 +1,23 @@
+---
+title: 'EnviroWealth: RAG pipeline for sustainability reports'
+date: '2026-07-30'
+tags: ['rag','nlp','langchain','qdrant']
+draft: false
+summary: 'Parts of a RAG pipeline that turns documents into BRSR sustainability reports, plus a Streamlit and Gemini chatbot prototype.'
+authors: ['default']
+---
+
+## Problem
+EnviroWealth, a carbon sustainability startup, needed to generate BRSR sustainability reports from large, messy source documents.
+
+## What I worked on
+My internship ran May to July 2026. I contributed to a RAG-based pipeline with three stages:
+- OCR of scanned documents with Tesseract
+- Chunking with Docling
+- Storage and retrieval in a Qdrant vector database
+
+I also built a standalone chatbot prototype with Streamlit and the Gemini API. It lets a user upload a report and ask questions about it, to explore conversational report generation. It stayed at prototype stage.
+
+**Tools:** Python, Tesseract, Docling, Qdrant, LangChain, Streamlit, Gemini API
+
+**Links:** Code is private to the company; a public rebuild is [in progress].

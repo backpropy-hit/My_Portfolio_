@@ -1,0 +1,18 @@
+{
+  "computer-vision": 3,
+  "transformers": 1,
+  "streamlit": 1,
+  "rag": 1,
+  "nlp": 1,
+  "langchain": 1,
+  "qdrant": 1,
+  "embedded": 1,
+  "esp32": 1,
+  "yolo": 1,
+  "ros2": 1,
+  "openvino": 1,
+  "pinn": 1,
+  "scientific-ml": 1,
+  "pytorch": 1,
+  "cfd": 1
+}

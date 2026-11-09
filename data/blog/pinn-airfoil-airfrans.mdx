@@ -1,0 +1,33 @@
+---
+title: 'Curvature-aware PINN for airfoil flow (AirfRANS)'
+date: '2026-10-15'
+tags: ['pinn','scientific-ml','pytorch','cfd']
+draft: false
+summary: 'Preprocessing and a physics-informed neural network for airfoil flow, with collocation points concentrated where the airfoil curves most.'
+authors: ['default']
+---
+
+## Problem
+A physics-informed neural network (PINN) learns airflow around an airfoil by enforcing the flow equations. Where the surface curves sharply the flow changes fast, so uniform sampling wastes training points.
+
+## What I built
+**Preprocessing** on the AirfRANS CFD dataset:
+- Non-dimensionalised and z-scored the features, using training-set statistics only to avoid leakage.
+- Computed airfoil curvature with a periodic smoothing spline and spread it into the flow field.
+- Computed mesh gradients with a 12-nearest-neighbour weighted least-squares method.
+- Labelled each node as surface, near-wall, wake or far-field, and compared three collocation samplers: uniform, mesh density and curvature-weighted.
+- Split the data into train, validation and a blind set made of the thickest 15% of airfoils.
+
+**Training and evaluation:**
+- A PINN trained with a data loss, a no-slip boundary loss and a RANS physics residual loss, weighted by curvature.
+- Hyperparameters tuned with Optuna.
+- Evaluated on validation and unseen-shape airfoils, including pressure on the surface, lift and drag.
+
+## Results
+- 60 simulations processed with no NaN or infinite values, about 180,000 mesh nodes per simulation.
+- Curvature and the pressure gradient near the wall correlated at about 0.72 (Spearman), which supports curvature-weighted sampling.
+- Final model accuracy (R², relative L2): [add from evaluation_metrics.json]
+
+**Tools:** Python, NumPy, SciPy, PyTorch, Optuna, Matplotlib
+
+**Links:** Repo: [add link]
