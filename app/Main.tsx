@@ -26,8 +26,8 @@ export default function Home({ posts }) {
             B.Tech in Engineering · Minor in Artificial Intelligence
           </p>
           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
-            Building real-time computer vision pipelines, segmentation transformers, RAG systems, and
-            physics-informed ML models for robotics and engineering applications.
+            Building real-time computer vision pipelines, segmentation transformers, RAG systems,
+            and physics-informed ML models for robotics and engineering applications.
           </p>
           <div className="flex flex-wrap gap-4 pt-1 text-sm font-medium">
             <Link
