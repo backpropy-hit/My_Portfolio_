@@ -11,9 +11,9 @@ const siteMetadata = {
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   email: 'hitbhailunagariya1700@gmail.com',
-  github: 'https://github.com/YOUR-GITHUB-USERNAME',
+  github: 'https://github.com/backpropy-hit',
   // twitter: 'https://twitter.com/Twitter',
-  linkedin: 'https://www.linkedin.com/in/YOUR-LINKEDIN-ID',
+  linkedin: 'https://www.linkedin.com/in/hitbhai-lunagariya/',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
