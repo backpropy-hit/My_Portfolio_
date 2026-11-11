@@ -17,6 +17,12 @@ const projectsData: Project[] = [
     href: '/blog/envirowealth-rag-pipeline',
   },
   {
+    title: 'Ask the Data: NL-to-SQL Pipeline',
+    description: `A natural-language-to-SQL tool over UNHCR and World Bank data. Validates every generated query, runs them on a read-only database, and measures execution accuracy (88% with self-correction).`,
+    imgSrc: '/static/images/twitter-card.png',
+    href: '/blog/ask-the-data',
+  },
+  {
     title: 'Drone Image Segmentation',
     description: 'Swin Transformer model that splits aerial photos into 7 classes, served in a Streamlit app.',
     href: '/blog/drone-image-segmentation-swin',
